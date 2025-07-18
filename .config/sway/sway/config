@@ -18,7 +18,8 @@ gaps inner 8
 
 exec mako 
 exec --no-startup-id cliphist daemon
-
+exec --no-startup-id nm-applet --indicator
+exec --no-startup-id blueman-applet
 
 #
 
@@ -81,6 +82,12 @@ bindsym $mod+Print exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+tab workspace back_and_forth
 bindsym $mod+alt+v exec $scripts_dir/cliphist.sh
 bindsym $mod+w exec $scripts_dir/WallpaperSelect.sh 
+
+
+  # Floating window 
+    bindsym $mod+Shift+f floating toggle 
+    floating_modifier $mod normal
+  #
 
 # Volume control using PipeWire (wpctl)
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ && $scripts_dir/volume_notification.sh
