@@ -27,11 +27,20 @@ done)
 # Let the user select an image using Wofi
 SELECTED_IMAGE=$(echo "$IMAGE_NAMES" | wofi --show dmenu -p "Select Wallpaper:")
 
-# If an image was selected, set it as wallpaper using swaybg
+# If an image was selected, set it as wallpaper using swaybg and run wallust
 if [ -n "$SELECTED_IMAGE" ]; then
   # Find the full path of the selected image
   FULL_PATH=$(echo "$IMAGE_LIST" | grep -m 1 "$SELECTED_IMAGE")
 
   # Set the selected image as wallpaper using swaybg
   swaybg -i "$FULL_PATH" -m fill
+
+  # Run wallust with the selected image
+  if command -v wallust &>/dev/null; then
+    wallust "$FULL_PATH"
+  elif command -v wal &>/dev/null; then
+    wal -i "$FULL_PATH" -n # -n prevents setting wallpaper (since we're using swaybg)
+  else
+    wofi --show dmenu -e "Neither wallust nor pywal is installed!"
+  fi
 fi
