@@ -10,8 +10,8 @@
 }
 
 window#waybar {
-  background: #1b182c;
-  opacity: 0.85;
+  background: #111010;
+  opacity: 0.75;
 }
 
 #window,
@@ -30,7 +30,7 @@ window#waybar {
 }
 
 #workspaces {
-  background: #962a54;
+  background: #d8eaed;
   color: white;
   font-weight: bold;
   border-radius: 0 1rem 1rem 0;
@@ -40,6 +40,6 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background: #7a2043;
+  background: #5e6769;
   border-radius: 1rem;
 }

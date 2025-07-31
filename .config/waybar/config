@@ -1,14 +1,26 @@
+
+
+
+
+
+
+
+
 {
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["wlr/taskbar", "pulseaudio", "memory", "cpu"],
+    "modules-center": ["clock"],
+    "modules-right": ["wlr/taskbar","tray","pulseaudio","battery"],
     "sway/window": {
         "max-length": 50
     },
     "clock": {
-        "format": "{:%a, %d. %b  %H:%M}",
+        "format": "{:%a, %d. %b  %I:%M %p}",
         "tooltip": false,
+    },
+    "tray":{
+      "icon-size": 20,
+      "spacing": 8
     },
     "wlr/taskbar": {
         "format": "{icon}",
@@ -17,6 +29,19 @@
         "tooltip-format": "{title}",
         "on-click": "activate",
         "on-click-middle": "close"
+    },
+    "battery": {
+      "format": "{icon}  {capacity}%",
+      "format-alt": "{time}",
+      "format-charging": " {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-full": " {capacity}%",
+      "states": {
+        "warning": 20,
+        "critical": 10
+      },
+      "interval": 10,
+      "tooltip": true
     },
     "memory": {
         "interval": 30,
