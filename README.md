@@ -9,8 +9,8 @@
 
 <p align="center">
 
-  <img href="https://raw.githubusercontent.com/TanshenH/dotfiles-sway/refs/heads/master/Screenshots/Screenshots/example.png" width="49%" /> 
-  <img href="https://github.com/TanshenH/dotfiles-sway/blob/master/Screenshots/Screenshots/pic1.png" width="49%" />
+  <img src="https://raw.githubusercontent.com/TanshenH/dotfiles-sway/refs/heads/master/Screenshots/example.png" width="49%" /> 
+  <img src="https://github.com/TanshenH/dotfiles-sway/blob/master/Screenshots//pic1.png" width="49%" />
   
 </p>
 
