@@ -1,9 +1,10 @@
 <div align="center">
   
   ### Sway configs
+**Sway dotfiles for my personal use.**
 </div>
 
-**Sway dotfiles for my personal use.**
+
 
 ### Screenshots
 
